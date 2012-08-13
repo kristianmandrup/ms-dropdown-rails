@@ -42,9 +42,12 @@ Also see the [ms-dropdown](http://www.marghoobsuleman.com/jquery-image-dropdown)
       <option value="graph" title="icons/icon_sales.gif">Graph</option>
       <option value="secured" title="icons/icon_secure.gif">Secured</option>
       <option value="video" title="icons/icon_video.gif">Video</option>
-    </select>
-   <br />
+  </select>
+```
 
+Or without option labels:
+
+```html
   <select style="width:50px" class="mydds" name="cart">
       <option value="calendar" selected="selected" title="icons/icon_calendar.gif"></option>
       <option value="shopping_cart" title="icons/icon_cart.gif"></option>
@@ -52,6 +55,9 @@ Also see the [ms-dropdown](http://www.marghoobsuleman.com/jquery-image-dropdown)
   </select>
 ```
 
+Make any `<select>` with the class `mydds` into an ms-dropdown:
+
+```javascript
 $(document).ready(function() {
 
   try {
@@ -60,9 +66,11 @@ $(document).ready(function() {
     console.log("Error: "+e.message);
   }
 })
-
+```
 
 ### Sprite image example
+
+Use the `class` option attribute on each option to identify the sprite image/class to use.
 
 ```html
 <select name="websites1" id="websites1" style="width:200px;" >
@@ -86,7 +94,7 @@ $(document).ready(function() {
 });
 ```
 
-the `useSprite:` option takes the name of the sprite to use.
+The `useSprite:` option takes the name of the sprite to use.
 
 Here the example sprite from the `dd.css` file.
 
@@ -135,7 +143,7 @@ Here the example sprite from the `dd.css` file.
 
 ### Custom sprite
 
-Simply replace with your own sprite name and adjust background positions for the sprites.
+Simply replace with your own sprite name (here `flags`) and adjust background positions for the sprite classes (here `denmark`).
 
 ```css
 .dd .ddChild a.flags, .dd .ddChild a.flags:visited {
@@ -147,6 +155,8 @@ Simply replace with your own sprite name and adjust background positions for the
   background-position:0 0px; width: 16px; height: 16px;
 }
 ```
+
+Use the sprite!
 
 ```javascript
 $("#websites1").msDropDown({useSprite:'flags'}).data("dd");
