@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "ms-dropdown-rails"
   gem.homepage = "http://github.com/kristianmandrup/ms-dropdown-rails"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Jquery ms-dropdown plugin for Rails asset pipeline}
+  gem.description = %Q{Use the ms-dropdown (select dropdown with icons) in your Rails project :)}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
   # dependencies defined in Gemfile

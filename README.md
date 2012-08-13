@@ -4,6 +4,10 @@
 
 See: [ms-Dropdown on github](https://github.com/marghoobsuleman/ms-Dropdown)
 
+## Install
+
+`gem 'ms-dropdown-rails'
+
 ## Usage
 
 In `application.js` manifest:
@@ -19,6 +23,13 @@ In `application.css` manifest:
  *= require ms-dropdown/dd
 */
 ```
+
+## Usage and customization
+
+See the specs folder for html files that demonstrate the functionality and various options.
+Also see the [ms-dropdown](http://www.marghoobsuleman.com/jquery-image-dropdown) site for more configuration instructions.
+
+Enjoy ;)
 
 ## Contributing to ms-dropdown-rails
  
