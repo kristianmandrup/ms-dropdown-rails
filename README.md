@@ -6,7 +6,7 @@ See: [ms-Dropdown on github](https://github.com/marghoobsuleman/ms-Dropdown)
 
 ## Install
 
-`gem 'ms-dropdown-rails'
+`gem 'ms-dropdown-rails'`
 
 ## Usage
 
