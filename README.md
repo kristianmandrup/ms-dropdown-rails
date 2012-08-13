@@ -29,6 +29,136 @@ In `application.css` manifest:
 See the specs folder for html files that demonstrate the functionality and various options.
 Also see the [ms-dropdown](http://www.marghoobsuleman.com/jquery-image-dropdown) site for more configuration instructions.
 
+```html
+  <select style="width:200px" class="mydds" name="cart-w-labels">
+      <option value="calendar" selected="selected" title="icons/icon_calendar.gif">Calendar</option>
+      <option value="shopping_cart" title="icons/icon_cart.gif">Shopping Cart</option>
+      <option value="cd" title="icons/icon_cd.gif">CD</option>
+      <option value="email" title="icons/icon_email.gif">Email</option>
+      <option value="faq" title="icons/icon_faq.gif">FAQ</option>
+      <option value="games" title="icons/icon_games.gif">Games</option>
+      <option value="music" title="icons/icon_music.gif">Music</option>
+      <option value="phone" title="icons/icon_phone.gif">Phone</option>
+      <option value="graph" title="icons/icon_sales.gif">Graph</option>
+      <option value="secured" title="icons/icon_secure.gif">Secured</option>
+      <option value="video" title="icons/icon_video.gif">Video</option>
+    </select>
+   <br />
+
+  <select style="width:50px" class="mydds" name="cart">
+      <option value="calendar" selected="selected" title="icons/icon_calendar.gif"></option>
+      <option value="shopping_cart" title="icons/icon_cart.gif"></option>
+      <option value="cd" title="icons/icon_cd.gif"></option>
+  </select>
+```
+
+$(document).ready(function() {
+
+  try {
+    $(".mydds").msDropDown().data("dd");
+  } catch(e) {
+    console.log("Error: "+e.message);
+  }
+})
+
+
+### Sprite image example
+
+```html
+<select name="websites1" id="websites1" style="width:200px;" >
+  <option class="calendar" value="calendar">Calendar</option>
+  <option class="shoppingcart" value="shopping_cart">Shopping Cart</option>
+  <option class="cd" value="cd">CD</option>
+  <option class="email" value="email">Email</option>
+  <option class="faq" value="faq">FAQ</option>
+  <option class="games" value="games">Games</option>
+  <option class="music" value="music">Music</option>
+  <option class="phone" value="phone">Phone</option>
+  <option class="graph" value="graph">Graph</option>
+  <option class="secured" value="secured">Secured</option>
+  <option class="video" value="video">Video</option>
+</select>
+```
+
+```javascript
+$(document).ready(function() {
+  $("#websites1").msDropDown({useSprite:'sprite'}).data("dd");
+});
+```
+
+the `useSprite:` option takes the name of the sprite to use.
+
+Here the example sprite from the `dd.css` file.
+
+```css
+.dd .ddChild a.sprite, .dd .ddChild a.sprite:visited {
+  background-image:url(/assets/ms-dropdown/sprite.gif);
+  background-repeat:no-repeat;
+  padding-left:24px;
+}
+
+.dd .ddChild a.calendar, .dd .ddChild a.calendar:visited {
+  background-position:0 -404px;
+}
+.dd .ddChild a.shoppingcart, .dd .ddChild a.shoppingcart:visited {
+  background-position:0 -330px;
+}
+.dd .ddChild a.cd, .dd .ddChild a.cd:visited {
+  background-position:0 -439px;
+}
+.dd .ddChild a.email, .dd .ddChild a.email:visited {
+  background-position:0 -256px;
+}
+.dd .ddChild a.faq, .dd .ddChild a.faq:visited {
+  background-position:0 -183px;
+}
+.dd .ddChild a.games,
+.dd .ddChild a.games:visited {
+  background-position:0 -365px;
+}
+.dd .ddChild a.music, .dd .ddChild a.music:visited {
+  background-position:0 -146px;
+}
+.dd .ddChild a.phone, .dd .ddChild a.phone:visited {
+  background-position:0 -109px;
+}
+.dd .ddChild a.graph, .dd .ddChild a.graph:visited {
+  background-position:0 -73px;
+}
+.dd .ddChild a.secured, .dd .ddChild a.secured:visited {
+  background-position:0 -37px;
+}
+.dd .ddChild a.video, .dd .ddChild a.video:visited {
+  background-position:0 0;
+}
+```
+
+### Custom sprite
+
+Simply replace with your own sprite name and adjust background positions for the sprites.
+
+```css
+.dd .ddChild a.flags, .dd .ddChild a.flags:visited {
+  background:url(/assets/world_flags_16.png) top left no-repeat;
+  padding-left:24px;
+}
+
+.dd .ddChild a.denmark, .dd .ddChild a.calendar:visited {
+  background-position:0 0px; width: 16px; height: 16px;
+}
+```
+
+```javascript
+$("#websites1").msDropDown({useSprite:'flags'}).data("dd");
+```
+
+```html
+<select name="country" id="country" style="width:200px;" >
+  <option class="denmark" value="denmark">Denmark</option>
+  ...
+</select>
+```
+
 Enjoy ;)
 
 ## Contributing to ms-dropdown-rails
