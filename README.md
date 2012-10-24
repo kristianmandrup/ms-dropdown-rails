@@ -24,6 +24,18 @@ In `application.css` manifest:
 */
 ```
 
+## Rails usage
+
+See [stackoverflow discussion](http://stackoverflow.com/questions/11050128/generate-html-select-with-title-inside-each-option-to-apply-the-msdropdown-p)
+
+For formtastic, use something like this:
+
+`[label, value, :title => 'abc']` or `[label, value, :class => 'abc']`
+
+```ruby
+f.select :style_id, Style.all.map{|p| [p.name, p.id, :title => p.image_url(:thumb)]}
+```
+
 ## Usage and customization
 
 See the specs folder for html files that demonstrate the functionality and various options.
