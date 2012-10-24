@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-13"
+  s.date = "2012-10-24"
   s.description = "Use the ms-dropdown (select dropdown with icons) in your Rails project :)"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "Readme.txt",
     "VERSION",
     "lib/ms-dropdown-rails.rb",
+    "ms-dropdown-rails.gemspec",
     "spec/README",
     "spec/ajax-cd.html",
     "spec/ajax-date.html",
@@ -106,23 +107,23 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, ["> 2.8.0"])
+      s.add_development_dependency(%q<rspec>, [">= 2.8.0"])
       s.add_development_dependency(%q<rdoc>, [">= 3.12"])
-      s.add_development_dependency(%q<bundler>, ["> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_development_dependency(%q<jeweler>, [">= 1.8.4"])
       s.add_development_dependency(%q<simplecov>, [">= 0.5"])
     else
-      s.add_dependency(%q<rspec>, ["> 2.8.0"])
+      s.add_dependency(%q<rspec>, [">= 2.8.0"])
       s.add_dependency(%q<rdoc>, [">= 3.12"])
-      s.add_dependency(%q<bundler>, ["> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_dependency(%q<jeweler>, [">= 1.8.4"])
       s.add_dependency(%q<simplecov>, [">= 0.5"])
     end
   else
-    s.add_dependency(%q<rspec>, ["> 2.8.0"])
+    s.add_dependency(%q<rspec>, [">= 2.8.0"])
     s.add_dependency(%q<rdoc>, [">= 3.12"])
-    s.add_dependency(%q<bundler>, ["> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+    s.add_dependency(%q<bundler>, [">= 1.0.0"])
+    s.add_dependency(%q<jeweler>, [">= 1.8.4"])
     s.add_dependency(%q<simplecov>, [">= 0.5"])
   end
 end
